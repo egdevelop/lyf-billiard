@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "67fe996264a1315af03c2684"
+  },
+  "name": "table-1",
+  "status": "kosong",
+  "transactionId": null,
+  "updatedAt": {
+    "$date": "2025-04-28T12:19:27.225Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe997064a1315af03c2686"
+  },
+  "name": "table-2",
+  "status": "terisi",
+  "transactionId": "680f5fd697935ce873de2eb8",
+  "updatedAt": {
+    "$date": "2025-04-28T11:00:39.878Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe997664a1315af03c2688"
+  },
+  "name": "table-3",
+  "status": "terisi",
+  "transactionId": "680f31cb97935ce873de2e60",
+  "updatedAt": {
+    "$date": "2025-04-28T07:44:12.715Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe997c64a1315af03c268a"
+  },
+  "name": "table-4",
+  "status": "terisi",
+  "transactionId": "680f319f97935ce873de2e45",
+  "updatedAt": {
+    "$date": "2025-04-28T07:43:29.471Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe998264a1315af03c268c"
+  },
+  "name": "table-5",
+  "status": "terisi",
+  "transactionId": "680f31e197935ce873de2e69",
+  "updatedAt": {
+    "$date": "2025-04-28T07:45:31.132Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe998b64a1315af03c268e"
+  },
+  "name": "table-6",
+  "status": "terisi",
+  "transactionId": "680f31ee97935ce873de2e6e",
+  "updatedAt": {
+    "$date": "2025-04-28T07:45:33.204Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe999164a1315af03c2690"
+  },
+  "name": "table-7",
+  "status": "terisi",
+  "transactionId": "680f31ff97935ce873de2e73",
+  "updatedAt": {
+    "$date": "2025-04-28T07:45:34.754Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe999a64a1315af03c2692"
+  },
+  "name": "table-vip-1",
+  "status": "terisi",
+  "transactionId": "680f32be97935ce873de2ea7",
+  "updatedAt": {
+    "$date": "2025-04-28T07:48:16.775Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe999f64a1315af03c2694"
+  },
+  "name": "table-vip-2",
+  "status": "terisi",
+  "transactionId": "680f321897935ce873de2e7d",
+  "updatedAt": {
+    "$date": "2025-04-28T07:45:38.727Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe99a764a1315af03c2696"
+  },
+  "name": "table-vip-3",
+  "status": "terisi",
+  "transactionId": "680f2ac697935ce873de2e3b",
+  "updatedAt": {
+    "$date": "2025-04-28T07:14:16.365Z"
+  }
+}]
