@@ -36,10 +36,12 @@ exports.findAll = async function () {
       let current = new Date(startTime);
 
       while (current < endTime) {
-        const hour = current.getHours();
-        const nextMinute = new Date(current.getTime() + 60000); // +1 menit
+        const nextMinute = new Date(
+          Math.ceil(current.getTime() / 60000) * 60000
+        ); // +1 menit
         if (nextMinute > endTime) break;
 
+        const hour = current.getHours();
         if (hour >= 1 && hour < 15) result.sesi1++;
         else result.sesi2++;
 
