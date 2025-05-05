@@ -32,7 +32,7 @@ exports.findAll = async function () {
     const data = await Transaction.find().sort({ _id: -1 });
 
     function calculateSessionMinutes(startTime, endTime) {
-      const result = { sesi1: 0, sesi2: 0, sesi3: 0 };
+      const result = { sesi1: 0, sesi2: 0 };
       let current = new Date(startTime);
 
       while (current < endTime) {
@@ -40,9 +40,8 @@ exports.findAll = async function () {
         const nextMinute = new Date(current.getTime() + 60000); // +1 menit
         if (nextMinute > endTime) break;
 
-        if (hour >= 1 && hour < 12) result.sesi1++;
-        else if (hour >= 12 && hour < 18) result.sesi2++;
-        else result.sesi3++;
+        if (hour >= 1 && hour < 15) result.sesi1++;
+        else result.sesi2++;
 
         current = nextMinute;
       }

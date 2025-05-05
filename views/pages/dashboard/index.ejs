@@ -1405,17 +1405,19 @@
                             <div class="d-flex justify-content-center gap-3">
                               <% if (o.status !== "kosong") { if(trans.status
                               !== "bermain") {%>
-                              <a
-                                href="/transaction/start/<%= trans._id %>"
+                              <button
+                                onclick="confirmAhref(`/transaction/start/<%= trans._id %>`)"
                                 class="btn btn-success"
-                                >Start</a
                               >
+                                Start
+                              </button>
                               <% }else{ %>
-                              <a
-                                href="/transaction/end/<%= trans._id %>"
+                              <button
+                                onclick="confirmAhref(`/transaction/end/<%= trans._id %>`)"
                                 class="btn btn-danger"
-                                >Selesai</a
                               >
+                                Selesai
+                              </button>
                               <% }} %>
                             </div>
                           </td>
@@ -1464,8 +1466,6 @@
                           <td>
                             <p>Sesi 1 : <%= o.sesi.sesi1 %></p>
                             <p>Sesi 2 : <%= o.sesi.sesi2 %></p>
-                            <p>Sesi 3 : <%= o.sesi.sesi3 %></p>
-                            <p>Total Harga :</p>
                           </td>
                         </tr>
                         <% }}); %>
@@ -1516,6 +1516,7 @@
                       class="form-control"
                       name="nama"
                       placeholder="Nama..."
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -1525,6 +1526,7 @@
                       class="form-control"
                       name="nowa"
                       placeholder="Whatsapp..."
+                      required
                     />
                   </div>
                   <input type="hidden" name="status" value="pending" />
@@ -1537,6 +1539,7 @@
                       tabindex="-1"
                       aria-hidden="true"
                       name="table"
+                      required
                     >
                       <option
                         selected
@@ -1582,6 +1585,7 @@
                       tabindex="-1"
                       aria-hidden="true"
                       name="paket"
+                      required
                     >
                       <option
                         selected
@@ -1660,6 +1664,7 @@
                       name="nama"
                       id="namaUpdate"
                       placeholder="Nama..."
+                      required
                     />
                   </div>
                   <div class="mb-3">
@@ -1670,6 +1675,7 @@
                       name="nowa"
                       id="nowaUpdate"
                       placeholder="Whatsapp..."
+                      required
                     />
                   </div>
                   <input
@@ -1688,6 +1694,7 @@
                       aria-hidden="true"
                       name="table"
                       id="tableUpdate"
+                      required
                     >
                       <option
                         selected
@@ -1734,6 +1741,7 @@
                       aria-hidden="true"
                       name="paket"
                       id="paketUpdate"
+                      required
                     >
                       <option
                         selected
@@ -1800,6 +1808,12 @@
     <!--! END: Theme Customizer !-->
 
     <script>
+      const confirmAhref = (href) => {
+        if (confirm("Apakah anda yakin?")) {
+          window.location.href = href;
+        }
+      };
+
       const updateValue = async (dataRaw) => {
         const data = JSON.parse(dataRaw);
 
